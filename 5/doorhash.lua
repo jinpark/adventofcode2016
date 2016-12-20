@@ -1,6 +1,6 @@
 local md5 = require 'md5'
 
-input = 'abc'
+input = 'ojvtpuvg'
 current_int = 0
 password = ''
 
@@ -11,7 +11,6 @@ repeat
         password = password .. md5string:sub(6,6)
     end
     current_int = current_int + 1
-    print(current_int)
 until password:len() == 8
 
 print(password)
