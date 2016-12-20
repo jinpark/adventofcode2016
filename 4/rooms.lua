@@ -10,12 +10,12 @@ local valid_sector_sum = 0
 for i = 1, #room_list do 
     local room = room_list[i]
 
-    local checksum = string.match(room, "%[(%a+)%]")
-    local sector = string.match(room, "%d+")
+    local checksum = room:match("%[(%a+)%]")
+    local sector = room:match("%d+")
 
-    local no_dash = string.gsub(room, '-', '')
-    local no_number = string.gsub(no_dash, '%d+', '')
-    local only_string = string.gsub(no_number, '%[(%a+)%]', '')
+    local no_dash = room:gsub('-', '')
+    local no_number = no_dash:gsub('%d+', '')
+    local only_string = no_number:gsub('%[(%a+)%]', '')
 
     local string_table = {}
     for i = 1, #only_string do 
