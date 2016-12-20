@@ -1,8 +1,8 @@
 local md5 = require 'md5'
 
-input = 'ojvtpuvg'
-current_int = 0
-password = ''
+local input = 'ojvtpuvg'
+local current_int = 0
+local password = ''
 
 repeat
     local new_input = input .. current_int
